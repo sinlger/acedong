@@ -31,4 +31,4 @@
       
         removeHandler() //移除事件
         
-        getEvent() //返回对event对象的引用
+        getEvent() //返回对event对象的引用
