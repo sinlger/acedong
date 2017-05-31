@@ -21,9 +21,9 @@
   9、跨浏览器的事件兼容
       ace.EventUtil
       
-        getEvent() //返回对event对象的引用
-      
         getTarget() //返回事件目标
+        
+        getEvent() //返回对event对象的引用
       
         preventDefault()  //取消事件默认行为
       
