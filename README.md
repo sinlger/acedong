@@ -1,4 +1,4 @@
-# acedong
+# acedong.js
 
   原生js封装的一些常用函数
   
