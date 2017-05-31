@@ -18,20 +18,19 @@
   
   8、ace.loadScriptString(code) 直接编译添加js
   
-  9、ace.EventUtil={
-  
-      //跨浏览器的事件兼容
+  9、跨浏览器的事件兼容
+      ace.EventUtil={
       
-      getEvent()  //返回对event对象的引用
+        getEvent()  //返回对event对象的引用
       
-      getTarget() //返回事件目标
+        getTarget() //返回事件目标
       
-      preventDefault()  //取消事件默认行为
+        preventDefault()  //取消事件默认行为
       
-      stopPropagation() //阻止事件冒泡
+        stopPropagation() //阻止事件冒泡
       
-      addHandler()  //添加事件
+        addHandler()  //添加事件
       
-      removeHandler() //移除事件
+        removeHandler() //移除事件
       
-  }
+      }
