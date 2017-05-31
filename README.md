@@ -19,9 +19,9 @@
   8、ace.loadScriptString(code) 直接编译添加js
   
   9、跨浏览器的事件兼容
-      ace.EventUtil={
+      ace.EventUtil
       
-        getEvent()  //返回对event对象的引用
+        getEvent() //返回对event对象的引用
       
         getTarget() //返回事件目标
       
@@ -33,4 +33,4 @@
       
         removeHandler() //移除事件
       
-      }
+  
