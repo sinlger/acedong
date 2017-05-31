@@ -19,7 +19,7 @@
   8、ace.loadScriptString(code) 直接编译添加js
   
   9、跨浏览器的事件兼容
-      ace.EventUtil
+      ace.EventUtil:
       
         getTarget() //返回事件目标
         
