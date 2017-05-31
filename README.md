@@ -22,5 +22,16 @@
   
       //跨浏览器的事件兼容
       
-      getEvent
+      getEvent()  //返回对event对象的引用
+      
+      getTarget() //返回事件目标
+      
+      preventDefault()  //取消事件默认行为
+      
+      stopPropagation() //阻止事件冒泡
+      
+      addHandler()  //添加事件
+      
+      removeHandler() //移除事件
+      
   }
