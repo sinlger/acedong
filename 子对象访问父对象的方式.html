@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	function Shape(){};
+	Shape.prototype.name="shape";
+	Shape.prototype.toString=function(){
+
+		var result = [];
+
+		if(this.constructor.uber){
+
+			result[result.length] = this.constructor.uber.toString();
+
+
+		}
+
+		result[result.length]=this.name;
+
+		console.log(result.length)
+
+		return result.join(", ");
+	}
+	function TwoDshape(){};
+	var F=function(){};
+	F.prototype = Shape.prototype;
+	TwoDshape.prototype = new F();;
+	TwoDshape.prototype.constructor = TwoDshape;
+	TwoDshape.uber= Shape.prototype;
+
+	TwoDshape.prototype.name= "2D Shape";
+
+	function Triangle(side,height){
+		this.side=side;
+		this.height=height;
+	}
+
+	var F=function(){};
+
+	F.prototype=TwoDshape.prototype;
+
+	Triangle.prototype = new F();;
+
+	Triangle.prototype.constructor = Triangle;
+
+	Triangle.uber = TwoDshape.prototype;
+
+	Triangle.prototype.name="Triangle Name";
+
+	Triangle.prototype.GetArea=function(){
+		return this.side*this.height;
+	}
+
+	var my = new Triangle(5,10);
+
+	console.log(my.toString())
+
+
+	//继承函数
+
+	function extend(child,parent){
+
+		var F=function(){};
+
+		F.prototype =  parent.prototype;
+
+		child.prototype = new F();
+
+		child.prototype.constructor = child;
+
+		child.uber = parent.prototype;
+
+	}
+
+</script>
+</body>
+</html>
