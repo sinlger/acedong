@@ -74,7 +74,17 @@
 		child.uber = parent.prototype;
 
 	}
+	//属性拷贝
 
+	function extend2(child,parent){
+		var c=child.prototype;
+		var p=parent.prototype;
+
+		for(var i in p){
+			c[i] = p[i]
+		}
+		c.uber=p;
+	}
 </script>
 </body>
 </html>
