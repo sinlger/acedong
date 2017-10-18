@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="200" height="200"></canvas>
+	<canvas id="canvas2" width="200" height="200"></canvas>
+	<script type="text/javascript">
+		var canvas= document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+
+		ctx.clearRect(0,0,200,200);
+		ctx.fillStyle="#000";
+		ctx.fillRect(10,10,130,130);
+
+		var path = new Path2D();
+		path.arc(75,75,50,0,Math.PI*2,true);
+		path.moveTo(110,75);
+		path.arc(75,75,35,0,Math.PI,false);
+		path.moveTo(65,65);
+		path.arc(60,65,5,0,Math.PI*2,true);
+		path.moveTo(95,65);
+		path.arc(90,65,5,0,Math.PI*2,true);
+		ctx.strokeStyle="#fff";
+		ctx.stroke(path);
+
+		var canvas2 = document.getElementById("canvas2");
+		var ctx2 = canvas2.getContext("2d");
+		ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+		ctx2.shadowOffsetX=2;
+		ctx2.shadowOffsetY=2;
+		ctx2.shadowBlur = 2;
+		ctx2.shadowColor = "red";
+		ctx2.font = "24px Arial";
+		ctx2.fillStyle = '#333';
+		ctx2.fillText('shadow text' ,20,40);
+	</script>
+</body>
+</html>
